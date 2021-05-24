@@ -1,7 +1,7 @@
-import JumbotronContainer from '../../containers/Jumbotron';
+import HomePage from '../../pages/Home';
 
 const App = () => {
-  return <JumbotronContainer />;
+  return <HomePage />;
 };
 
 export default App;
