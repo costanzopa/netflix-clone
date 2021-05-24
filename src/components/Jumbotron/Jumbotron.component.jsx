@@ -11,8 +11,8 @@ import {
 
 const Jumbotron = ({ children, direction = 'row', ...restProps }) => {
   return (
-    <Item direction={direction}>
-      <Inner>{children}</Inner>
+    <Item {...restProps}>
+      <Inner direction={direction}>{children} </Inner>
     </Item>
   );
 };
@@ -29,7 +29,7 @@ Jumbotron.Title = ({ children, ...restProps }) => {
   return <Title {...restProps}>{children}</Title>;
 };
 
-Jumbotron.Subtitle = ({ children, ...restProps }) => {
+Jumbotron.SubTitle = ({ children, ...restProps }) => {
   return <Subtitle {...restProps}>{children}</Subtitle>;
 };
 
