@@ -1,5 +1,5 @@
 import React from 'react';
-import { Footer } from '../../components';
+import { Footer, Language } from '../../components';
 
 const FooterContainer = (props) => {
   return (
@@ -36,6 +36,12 @@ const FooterContainer = (props) => {
           <Footer.Link href="#">Legal Notices</Footer.Link>
         </Footer.Column>
       </Footer.Row>
+      <Language>
+        <Language.Select>
+          <Language.Option>English</Language.Option>
+          <Language.Option>Espanol</Language.Option>
+        </Language.Select>
+      </Language>
       <Footer.Break />
       <Footer.Text>Netflix Argentina</Footer.Text>
     </Footer>
