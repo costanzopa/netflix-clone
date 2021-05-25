@@ -17,7 +17,7 @@ export const Select = styled.select`
   text-transform: none;
   border-radius: 2px;
   background-color: #000;
-  background-image: url('images/misc/world.png');
+  background-image: url('images/icons/world.png');
   background-repeat: no-repeat;
   background-size: 1em auto;
   background-position: 0.4em center;
