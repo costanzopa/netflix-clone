@@ -39,7 +39,7 @@ const FooterContainer = (props) => {
       <Language>
         <Language.Select>
           <Language.Option>English</Language.Option>
-          <Language.Option>Espanol</Language.Option>
+          <Language.Option>Español</Language.Option>
         </Language.Select>
       </Language>
       <Footer.Break />
