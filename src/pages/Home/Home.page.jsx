@@ -6,8 +6,8 @@ import FaqsContainer from '../../containers/Faqs';
 const HomePage = (props) => {
   return (
     <>
-      <FaqsContainer />
       <JumbotronContainer />
+      <FaqsContainer />
       <FooterContainer />
     </>
   );

@@ -11,7 +11,7 @@ export const Select = styled.select`
   border: 1px solid #333;
   color: #999;
   font-size: 16px;
-  padding: 1em 0.1em 1em 2em;
+  padding: 1em 1.1em 1.1em 2.5em;
   line-height: 1.7;
   text-indent: 0;
   text-transform: none;
@@ -20,7 +20,7 @@ export const Select = styled.select`
   background-image: url('images/icons/world.png');
   background-repeat: no-repeat;
   background-size: 1em auto;
-  background-position: 0.4em center;
+  background-position: 1em center;
 `;
 
 export const Option = styled.option`
