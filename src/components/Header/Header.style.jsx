@@ -19,17 +19,12 @@ export const Background = styled.div`
   }
 `;
 
-export const Frame = styled.div``;
-
 export const Container = styled.div`
   display: flex;
-  margin: 0 53px;
+  margin: 0 50px;
   height: 100px;
   justify-content: space-between;
   align-items: center;
-  a {
-    display: flex;
-  }
   @media (max-width: 1000px) {
     margin: 0 30px;
   }
@@ -45,20 +40,35 @@ export const Logo = styled.img`
   }
 `;
 
+export const RightSideGroup = styled.div`
+  display: flex;
+  align-items: center;
+  width: 12%;
+  justify-content: space-between;
+  @media (max-width: 1000px) {
+    width: 45%;
+    flex-direction: row;
+  }
+`;
+
 export const ButtonLink = styled(ReactRouterLink)`
-  display: block;
   background-color: #e50914;
-  width: 50px;
-  height: fit-content;
   color: white;
+  line-height: normal;
+  font-size: 1rem;
+  font-weight: 400;
   border: 0;
-  font-size: 15px;
+  right: 0;
   border-radius: 3px;
-  padding: 8px 17px;
+  height: fit-content;
+  border-radius: 3px;
+  padding: 7px 17px;
+  float: none;
+  margin-top: 0;
+  white-space: nowrap;
   cursor: pointer;
   text-decoration: none;
-  font-weight: 400;
-  font-size: 1rem;
+
   &:hover {
     background: #f40612;
   }

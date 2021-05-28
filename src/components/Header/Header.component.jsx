@@ -1,7 +1,13 @@
 import React from 'react';
 import { Link as ReactRouterLink } from 'react-router-dom';
 
-import { Background, Container, Logo, ButtonLink } from './Header.style';
+import {
+  Background,
+  Container,
+  Logo,
+  RightSideGroup,
+  ButtonLink,
+} from './Header.style';
 
 const Header = ({ bg = true, children, ...restProps }) => {
   return bg ? <Background {...restProps}>{children}</Background> : children;
@@ -17,6 +23,10 @@ Header.Logo = ({ to, ...restProps }) => {
       <Logo {...restProps} />
     </ReactRouterLink>
   );
+};
+
+Header.RightSideGroup = ({ children, ...restProps }) => {
+  return <RightSideGroup {...restProps}> {children}</RightSideGroup>;
 };
 
 Header.ButtonLink = ({ children, ...restProps }) => {
