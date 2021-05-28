@@ -5,14 +5,16 @@ export const Container = styled.div`
   flex-direction: column;
   border-bottom: 8px solid #222;
   text-align: center;
-  padding: 165px 45px;
+  padding: 145px 40px;
 `;
 
 export const Title = styled.h1`
   color: white;
   max-width: 640px;
-  font-size: 3.125rem;
-  font-weight: 500;
+  font-size: 3.7em;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: 3px;
   margin: auto;
   @media (max-width: 600px) {
     font-size: 35px;

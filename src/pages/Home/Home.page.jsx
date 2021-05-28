@@ -12,9 +12,7 @@ const HomePage = (props) => {
     <>
       <HeaderContainer>
         <Feature>
-          <Feature.Title>
-            Unlimited films, TV programmes and more.
-          </Feature.Title>
+          <Feature.Title>Unlimited films, TV shows, and more.</Feature.Title>
           <Feature.SubTitle>
             Watch anywhere. Cancel at any time.
           </Feature.SubTitle>
