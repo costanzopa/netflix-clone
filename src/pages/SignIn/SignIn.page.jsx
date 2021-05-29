@@ -1,9 +1,12 @@
 import React, { useState, useContext } from 'react';
+import { useHistory } from 'react-router';
 import { HeaderContainer, FooterContainer } from '../../containers';
 import { Form } from '../../components';
 import { FirebaseContext } from '../../context/firebase';
+import * as ROUTES from '../../constants/Routes';
 
 const SignInPage = (props) => {
+  const history = useHistory();
   const firebase = useContext(FirebaseContext);
   const [emailAddress, setEmailAddress] = useState('');
   const [password, setPassword] = useState('');
@@ -12,6 +15,18 @@ const SignInPage = (props) => {
   const isInvalid = password === '' || emailAddress === '';
   const handleSignIn = (event) => {
     event.preventDefault();
+
+    return firebase
+      .auth()
+      .signInWithEmailAndPassword(emailAddress, password)
+      .then(() => {
+        history.push(ROUTES.BROWSE);
+      })
+      .catch((error) => {
+        setEmailAddress('');
+        setPassword('');
+        setError(error.message);
+      });
   };
 
   return (
