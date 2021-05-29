@@ -6,13 +6,14 @@ export const Background = styled.div`
   flex-direction: column;
   background: linear-gradient(
       to bottom,
-      rgba(0, 0, 0, 0.35),
-      rgba(0, 0, 0, 0.1),
-      rgba(0, 0, 0, 0.35)
+      rgba(0, 0, 0, 0.45),
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.45)
     ),
     url(${({ src }) =>
-        src ? `../images/misc/${src}.jpg` : '../images/misc/home-bg.jpg'})
+        src ? `images/misc/${src}.jpg` : 'images/misc/home-bg.jpg'})
       top left / cover no-repeat;
+
   @media (max-width: 1100px) {
     ${({ dontShowOnSmallViewPort }) =>
       dontShowOnSmallViewPort && `background: none;`}
