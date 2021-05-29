@@ -1,6 +1,12 @@
 import React from 'react';
+import { HeaderContainer, FooterContainer } from '../../containers';
 
 const SignInPage = (props) => {
-  return <div>SignIn Page</div>;
+  return (
+    <>
+      <HeaderContainer></HeaderContainer>
+      <FooterContainer />
+    </>
+  );
 };
 export default SignInPage;
