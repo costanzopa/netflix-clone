@@ -6,3 +6,4 @@ export { default as Feature } from './Feature';
 export { default as OptForm } from './OptForm';
 export { default as Language } from './Language';
 export { default as Footer } from './Footer';
+export { default as Form } from './Form';
