@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { HeaderContainer, FooterContainer } from '../../containers';
 import { Form } from '../../components';
+import { FirebaseContext } from '../../context/firebase';
 
 const SignInPage = (props) => {
+  const firebase = useContext(FirebaseContext);
   const [emailAddress, setEmailAddress] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -35,6 +37,13 @@ const SignInPage = (props) => {
               Sign In
             </Form.Submit>
           </Form.Base>
+          <Form.Text>
+            New to Netflix? <Form.Link to="/signup">Sign up now.</Form.Link>
+          </Form.Text>
+          <Form.TextSmall>
+            This page is protected by Google reCAPTCHA to ensure you're not a
+            bot. Learn more.
+          </Form.TextSmall>
         </Form>
       </HeaderContainer>
       <FooterContainer />
