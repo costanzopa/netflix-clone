@@ -7,3 +7,4 @@ export { default as OptForm } from './OptForm';
 export { default as Language } from './Language';
 export { default as Footer } from './Footer';
 export { default as Form } from './Form';
+export { default as Loader } from './Loader';

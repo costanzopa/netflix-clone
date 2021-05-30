@@ -4,6 +4,7 @@ import * as ROUTES from '../../constants/Routes';
 import IsUserLoggedIn from '../../routes/IsUserLoggedIn';
 import ProtectedRoute from '../../routes/ProtectedRoute';
 import useAuthListener from '../../hooks/user-auth-listener';
+import Loader from '../Loader';
 
 const BrowsePage = lazy(() => import('../../pages/Browse'));
 const SignInPage = lazy(() => import('../../pages/SignIn'));
@@ -15,7 +16,7 @@ const App = () => {
   const user = useAuthListener();
   return (
     <Router>
-      <Suspense fallback={() => <div>Loading...</div>}>
+      <Suspense fallback={<Loader />}>
         <Switch>
           <ProtectedRoute user={user} path={ROUTES.BROWSE} exact>
             <BrowsePage />
