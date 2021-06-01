@@ -9,3 +9,4 @@ export { default as Footer } from './Footer';
 export { default as Form } from './Form';
 export { default as Loader } from './Loader';
 export { default as Profiles } from './Profiles';
+export { default as Loading } from './Loading';
