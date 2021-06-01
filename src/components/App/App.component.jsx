@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import * as ROUTES from '../../constants/Routes';
 import IsUserLoggedIn from '../../routes/IsUserLoggedIn';
 import ProtectedRoute from '../../routes/ProtectedRoute';
-import { useAuthListener } from '../../hooks/user-auth-listener';
+import { useAuthListener } from '../../hooks';
 import Loader from '../Loader';
 
 const BrowsePage = lazy(() => import('../../pages/Browse'));
