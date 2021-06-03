@@ -15,6 +15,7 @@ import {
   Maturity,
   FeatureText,
   FeatureClose,
+  Entities,
 } from './Card.style';
 
 export const FeatureContext = createContext();
@@ -50,6 +51,10 @@ Card.Text = function CardText({ children, ...restProps }) {
 
 Card.Meta = function CardMeta({ children, ...restProps }) {
   return <Meta {...restProps}>{children}</Meta>;
+};
+
+Card.Entities = function CardEntities({ children, ...restProps }) {
+  return <Entities {...restProps}>{children}</Entities>;
 };
 
 Card.Item = function CardItem({ item, children, ...restProps }) {
