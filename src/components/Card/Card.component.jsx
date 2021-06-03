@@ -1,6 +1,14 @@
-import React, { useState, createContext } from 'react';
+import React, { useState, useContext, createContext } from 'react';
 
-import { Container, Group, Title } from './Card.style';
+import {
+  Container,
+  Group,
+  Title,
+  Text,
+  SubTitle,
+  Meta,
+  Item,
+} from './Card.style';
 
 export const FeatureContext = createContext();
 
@@ -23,4 +31,32 @@ Card.Group = function CardGroup({ children, ...restProps }) {
 
 Card.Title = function CardTitle({ children, ...restProps }) {
   return <Title {...restProps}>{children}</Title>;
+};
+
+Card.SubTitle = function CardSubTitle({ children, ...restProps }) {
+  return <SubTitle {...restProps}>{children}</SubTitle>;
+};
+
+Card.Text = function CardText({ children, ...restProps }) {
+  return <Text {...restProps}>{children}</Text>;
+};
+
+Card.Meta = function CardMeta({ children, ...restProps }) {
+  return <Meta {...restProps}>{children}</Meta>;
+};
+
+Card.Item = function CardItem({ item, children, ...restProps }) {
+  const { setShowFeature, setItemFeature } = useContext(FeatureContext);
+
+  return (
+    <Item
+      onClick={() => {
+        setItemFeature(item);
+        setShowFeature(true);
+      }}
+      {...restProps}
+    >
+      {children}
+    </Item>
+  );
 };
