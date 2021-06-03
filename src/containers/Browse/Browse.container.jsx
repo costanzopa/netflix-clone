@@ -5,6 +5,7 @@ import { Loading, Header, Card } from '../../components';
 
 import * as ROUTES from '../../constants/Routes';
 import logo from '../../logo.svg';
+import FooterContainer from '../Footer';
 
 const BrowseContainer = ({ slides }) => {
   const [category, setCategory] = useState('series');
@@ -100,6 +101,7 @@ const BrowseContainer = ({ slides }) => {
           </Card>
         ))}
       </Card.Group>
+      <FooterContainer />
     </>
   ) : (
     <SelectProfileContainer user={user} setProfile={setProfile} />
