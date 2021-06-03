@@ -10,3 +10,4 @@ export { default as Form } from './Form';
 export { default as Loader } from './Loader';
 export { default as Profiles } from './Profiles';
 export { default as Loading } from './Loading';
+export { default as Card } from './Card';
