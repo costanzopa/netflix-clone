@@ -20,7 +20,7 @@ Player.Video = function PlayerVideo({ src, ...restProps }) {
 
   return showPlayer
     ? ReactDOM.createPortal(
-        <Overlay onClick={() => setShowPlayer(false)}>
+        <Overlay onClick={() => setShowPlayer(false)} data-testid="player">
           <Inner
             onClick={(event) => {
               event.stopPropagation();
