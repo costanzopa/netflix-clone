@@ -18,4 +18,20 @@ describe('<Player />', () => {
     expect(queryByTestId('player')).toBeFalsy();
     expect(container.firstChild).toMatchSnapshot();
   });
+
+  it('close the <Player /> when click on Close Button', () => {
+    const { container, getByText, queryByTestId } = render(
+      <Player>
+        <Player.Button />
+        <Player.Video src="/videos/bunny.mp4" />
+      </Player>
+    );
+
+    expect(queryByTestId('player')).toBeFalsy();
+    fireEvent.click(getByText('Play'));
+    expect(queryByTestId('player')).toBeTruthy();
+    fireEvent.click(queryByTestId('player-closer'));
+    expect(queryByTestId('player')).toBeFalsy();
+    expect(container.firstChild).toMatchSnapshot();
+  });
 });

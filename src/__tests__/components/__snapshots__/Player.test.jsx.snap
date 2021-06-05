@@ -1,5 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<Player /> close the <Player /> when click on Close Button 1`] = `
+<div
+  class="Playerstyle__Container-sc-5na3a5-0"
+>
+  <button
+    class="Playerstyle__Button-sc-5na3a5-4 vSqay"
+  >
+    Play
+  </button>
+</div>
+`;
+
 exports[`<Player /> renders the <Player /> with a bunny video 1`] = `
 <div
   class="Playerstyle__Container-sc-5na3a5-0"

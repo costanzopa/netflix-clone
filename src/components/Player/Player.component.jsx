@@ -29,7 +29,10 @@ Player.Video = function PlayerVideo({ src, ...restProps }) {
             <video id="netflix-player" controls autoPlay>
               <source src={src} type="video/mp4" />
             </video>
-            <Close onClick={() => setShowPlayer(false)} />
+            <Close
+              onClick={() => setShowPlayer(false)}
+              data-testid="player-closer"
+            />
           </Inner>
         </Overlay>,
         document.body
