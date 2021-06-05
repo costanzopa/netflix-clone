@@ -11,6 +11,7 @@ import FooterContainer from '../Footer';
 const BrowseContainer = ({ slides }) => {
   const [category, setCategory] = useState('series');
   const [searchTerm, setSearchTerm] = useState('');
+  const [debouncedSearchTerm, setDebouncedSearchTerm] = useState(searchTerm);
   const [profile, setProfile] = useState({});
   const [loading, setLoading] = useState(true);
   const [slideRows, setSlideRows] = useState([]);
@@ -26,17 +27,23 @@ const BrowseContainer = ({ slides }) => {
   }, [slides, category]);
 
   useEffect(() => {
-    const fuse = new Fuse(slideRows, {
-      keys: ['data.description', 'data.title', 'data.genre'],
-    });
-    const results = fuse.search(searchTerm).map(({ item }) => item);
-
-    if (slideRows.length > 0 && searchTerm.length > 3 && results.length > 0) {
-      setSlideRows(results);
-    } else {
-      setSlideRows(slides[category]);
-    }
+    const timerId = setTimeout(() => {
+      setDebouncedSearchTerm(searchTerm);
+    }, 1000);
+    return () => {
+      clearTimeout(timerId);
+    };
   }, [searchTerm]);
+
+  useEffect(() => {
+    const fuse = new Fuse(slideRows, {
+      keys: ['data.title'],
+    });
+    const results = fuse.search(debouncedSearchTerm).map(({ item }) => item);
+    if (debouncedSearchTerm !== '' && results.length > 0) setSlideRows(results);
+    else setSlideRows(slides[category]);
+    // eslint-disable-next-line
+  }, [debouncedSearchTerm]);
 
   const { firebase } = useContext(FirebaseContext);
   const user = firebase.auth().currentUser || {};
