@@ -1,5 +1,84 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<Card /> renders the <Card /> with and clicks the card feature 1`] = `
+<div
+  class="Cardstyle__Group-fiqm3m-2 cYxyio"
+>
+  <div
+    class="Cardstyle__Container-fiqm3m-1 femXSL"
+  >
+    <p
+      class="Cardstyle__Title-fiqm3m-0 cQkCFc"
+    >
+      Documentaries
+    </p>
+    <div
+      class="Cardstyle__Entities-fiqm3m-11 doyLEa"
+    >
+      <div
+        class="Cardstyle__Item-fiqm3m-13 hSaVnB"
+        data-testid="tiger-king-item-feature"
+      >
+        <img
+          class="Cardstyle__Image-fiqm3m-14 iEaTQx"
+          src="/images/series/documentaries/tiger-king/small.jpg"
+        />
+        <div
+          class="Cardstyle__Meta-fiqm3m-12 iTmCju"
+        >
+          <p
+            class="Cardstyle__SubTitle-fiqm3m-3 inPFjE"
+          >
+            Tiger King
+          </p>
+          <p
+            class="Cardstyle__Text-fiqm3m-4 iUHSVB"
+          >
+            Tiger King description
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="Cardstyle__Container-fiqm3m-1 femXSL"
+  >
+    <p
+      class="Cardstyle__Title-fiqm3m-0 cQkCFc"
+    >
+      Feel Good
+    </p>
+    <div
+      class="Cardstyle__Entities-fiqm3m-11 doyLEa"
+    >
+      <div
+        class="Cardstyle__Item-fiqm3m-13 hSaVnB"
+        data-testid="juno-item-feature"
+      >
+        <img
+          class="Cardstyle__Image-fiqm3m-14 iEaTQx"
+          src="/images/series/feel-good/juno/small.jpg"
+        />
+        <div
+          class="Cardstyle__Meta-fiqm3m-12 iTmCju"
+        >
+          <p
+            class="Cardstyle__SubTitle-fiqm3m-3 inPFjE"
+          >
+            Juno
+          </p>
+          <p
+            class="Cardstyle__Text-fiqm3m-4 iUHSVB"
+          >
+            Juno description
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`<Card /> renders the <Card /> with populated data 1`] = `
 <div
   class="Cardstyle__Group-fiqm3m-2 cYxyio"
