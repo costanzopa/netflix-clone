@@ -1,0 +1,123 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<App /> renders the <App /> Browse Page 1`] = `
+<div>
+  Loading...
+</div>
+`;
+
+exports[`<App /> renders the <App /> Home Page 1`] = `
+<div>
+  Loading...
+</div>
+`;
+
+exports[`<App /> renders the <App /> Not Found Page 1`] = `
+<div
+  class="Headerstyle__Background-sc-3xgjqq-0 cGgsdG"
+>
+  <div
+    class="Headerstyle__Container-sc-3xgjqq-1 loXBfm"
+  >
+    <a
+      href="/"
+    >
+      <img
+        alt="Netflix"
+        class="Headerstyle__Logo-sc-3xgjqq-2 hKgchH"
+        src="logo.svg"
+      />
+    </a>
+    <div
+      class="Headerstyle__RightSideGroup-sc-3xgjqq-3 kNytJQ"
+    >
+       
+      <div
+        class="Languagestyle__Container-qm4u48-0 gBWpMe"
+      >
+        <select
+          class="Languagestyle__Select-qm4u48-1 eilesr"
+        >
+          <option
+            class="Languagestyle__Option-qm4u48-2 fDdeZJ"
+          >
+            English
+          </option>
+          <option
+            class="Languagestyle__Option-qm4u48-2 fDdeZJ"
+          >
+            Español
+          </option>
+        </select>
+      </div>
+      <a
+        class="Headerstyle__ButtonLink-sc-3xgjqq-4 kkjLGh"
+        href="/signin"
+      >
+        Sign In
+      </a>
+    </div>
+  </div>
+  <div
+    class="Formstyle__Container-essdcc-0 hxkiqL"
+  >
+    <h1
+      class="Formstyle__Title-essdcc-3 efWCIe"
+    >
+      Sign In
+    </h1>
+    
+    <form
+      class="Formstyle__Base-essdcc-2 cBEHrq"
+      method="POST"
+    >
+      <input
+        class="Formstyle__Input-essdcc-7 gJQFxP"
+        placeholder="Email Address"
+        value=""
+      />
+      <input
+        autocomplete="off"
+        class="Formstyle__Input-essdcc-7 gJQFxP"
+        placeholder="Password"
+        type="password"
+        value=""
+      />
+      <button
+        class="Formstyle__Submit-essdcc-8 dMXahW"
+        type="submit"
+      >
+        Sign In
+      </button>
+    </form>
+    <p
+      class="Formstyle__Text-essdcc-4 dNdoNS"
+    >
+      New to Netflix? 
+      <a
+        class="Formstyle__Link-essdcc-6 brIdxE"
+        href="/signup"
+      >
+        Sign up now.
+      </a>
+    </p>
+    <p
+      class="Formstyle__TextSmall-essdcc-5 hqSqfw"
+    >
+      This page is protected by Google reCAPTCHA to ensure you're not a bot. Learn more.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`<App /> renders the <App /> Sign Up Page 1`] = `
+<div>
+  Loading...
+</div>
+`;
+
+exports[`<App /> renders the <App /> Sign in Page 1`] = `
+<div>
+  Loading...
+</div>
+`;
