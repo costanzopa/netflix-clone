@@ -1,12 +1,5 @@
 import React from 'react';
-import {
-  render,
-  fireEvent,
-  queryByTestId,
-  queryByAltText,
-  getByAltText,
-  queryByText,
-} from '@testing-library/react';
+import { render, fireEvent } from '@testing-library/react';
 import faqsData from '../../fixtures/faqs.json';
 import { Accordion } from '../../components';
 

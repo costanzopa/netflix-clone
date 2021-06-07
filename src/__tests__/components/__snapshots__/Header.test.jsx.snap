@@ -1,0 +1,159 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Header /> renders the basic <Header /> with a background 1`] = `
+<div
+  class="Headerstyle__Background-sc-3xgjqq-0 cGgsdG"
+  data-testid="header-bg"
+>
+  <div
+    class="Headerstyle__Container-sc-3xgjqq-1 loXBfm"
+  >
+    <a>
+      <img
+        alt="Netflix"
+        class="Headerstyle__Logo-sc-3xgjqq-2 hKgchH"
+        src="logo.svg"
+      />
+    </a>
+    <p
+      class="Headerstyle__Link-sc-3xgjqq-9 jDlYhc"
+    >
+      Hello I am a link!
+    </p>
+  </div>
+</div>
+`;
+
+exports[`<Header /> renders the basic <Header /> without a background 1`] = `
+<div
+  class="Headerstyle__Container-sc-3xgjqq-1 loXBfm"
+>
+  <a>
+    <img
+      alt="Netflix"
+      class="Headerstyle__Logo-sc-3xgjqq-2 hKgchH"
+      src="logo.svg"
+    />
+  </a>
+  <a
+    class="Headerstyle__ButtonLink-sc-3xgjqq-4 kkjLGh"
+  >
+    Sign In
+  </a>
+  <p
+    class="Headerstyle__Link-sc-3xgjqq-9 jYFFQs"
+  >
+    Hello I am a link!
+  </p>
+</div>
+`;
+
+exports[`<Header /> renders the full <Header> with a background 1`] = `
+<div
+  class="Headerstyle__Background-sc-3xgjqq-0 jXrZQE"
+  data-testid="header-bg"
+  src="joker1"
+>
+  <div
+    class="Headerstyle__Container-sc-3xgjqq-1 loXBfm"
+  >
+    <div
+      class="Headerstyle__Group-sc-3xgjqq-8 vySfZ"
+    >
+      <a>
+        <img
+          alt="Netflix"
+          class="Headerstyle__Logo-sc-3xgjqq-2 hKgchH"
+          src="logo.svg"
+        />
+      </a>
+      <p
+        class="Headerstyle__Link-sc-3xgjqq-9 jYFFQs"
+      >
+        Series
+      </p>
+      <p
+        class="Headerstyle__Link-sc-3xgjqq-9 jYFFQs"
+      >
+        Films
+      </p>
+    </div>
+    <div
+      class="Headerstyle__Group-sc-3xgjqq-8 vySfZ"
+    >
+      <div
+        class="Headerstyle__Search-sc-3xgjqq-13 cuHhMZ"
+      >
+        <button
+          class="Headerstyle__SearchIcon-sc-3xgjqq-14 dJvsnw"
+          data-testid="search-click"
+        >
+          <img
+            alt="Search"
+            src="/images/icons/search.png"
+          />
+        </button>
+        <input
+          class="Headerstyle__SearchInput-sc-3xgjqq-12 jgJkCe"
+          data-testid="search-input"
+          placeholder="Search films and series"
+          value="Joker"
+        />
+      </div>
+      <div
+        class="Headerstyle__Profile-sc-3xgjqq-15 gvAKqt"
+      >
+        <button
+          class="Headerstyle__Picture-sc-3xgjqq-10 DupFT"
+          src="/images/users//images/users/1.png.png"
+        />
+        <div
+          class="Headerstyle__Dropdown-sc-3xgjqq-11 QjvoO"
+        >
+          <div
+            class="Headerstyle__Group-sc-3xgjqq-8 vySfZ"
+          >
+            <button
+              class="Headerstyle__Picture-sc-3xgjqq-10 DupFT"
+              src="/images/users//images/users/1.png.png"
+            />
+            <p
+              class="Headerstyle__Link-sc-3xgjqq-9 jYFFQs"
+            >
+              Pablo Costanzo
+            </p>
+          </div>
+          <div
+            class="Headerstyle__Group-sc-3xgjqq-8 vySfZ"
+          >
+            <p
+              class="Headerstyle__Link-sc-3xgjqq-9 jYFFQs"
+            >
+              Sign out
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="Headerstyle__Container-sc-3xgjqq-1 Headerstyle__Feature-sc-3xgjqq-5 loXBfm kivQiK"
+  >
+    <h2
+      class="Headerstyle__FeatureCallOut-sc-3xgjqq-7 claWLZ"
+    >
+      Watch Joker Now
+    </h2>
+    <p
+      class="Headerstyle__Text-sc-3xgjqq-6 huuuJW"
+    >
+      Forever alone in a crowd...
+    </p>
+    <button
+      class="Headerstyle__PlayButton-sc-3xgjqq-16 hTJnBD"
+    >
+      Play
+    </button>
+  </div>
+</div>
+`;

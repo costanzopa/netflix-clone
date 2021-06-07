@@ -53,7 +53,7 @@ exports[`<Form /> renders the <Form /> with populated data 1`] = `
     New to Netflix? 
     <a
       class="Formstyle__Link-essdcc-6 brIdxE"
-      href="/signup"
+      to="/signup"
     >
       Sign up now.
     </a>

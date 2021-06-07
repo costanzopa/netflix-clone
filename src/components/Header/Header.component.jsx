@@ -22,7 +22,13 @@ import {
 } from './Header.style';
 
 const Header = ({ bg = true, children, ...restProps }) => {
-  return bg ? <Background {...restProps}>{children}</Background> : children;
+  return bg ? (
+    <Background {...restProps} data-testid="header-bg">
+      {children}
+    </Background>
+  ) : (
+    children
+  );
 };
 
 Header.Group = ({ children, ...restProps }) => {
@@ -51,14 +57,6 @@ Header.Text = ({ children, ...restProps }) => {
 
 Header.Frame = ({ children, ...restProps }) => {
   return <Container {...restProps}>{children}</Container>;
-};
-
-Header.Logo = ({ to, ...restProps }) => {
-  return (
-    <ReactRouterLink to={to}>
-      <Logo {...restProps} />
-    </ReactRouterLink>
-  );
 };
 
 Header.RightSideGroup = ({ children, ...restProps }) => {
