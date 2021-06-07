@@ -7,7 +7,7 @@ import * as ROUTES from '../../constants/Routes';
 
 const SignInPage = (props) => {
   const history = useHistory();
-  const firebase = useContext(FirebaseContext);
+  const { firebase } = useContext(FirebaseContext);
   const [emailAddress, setEmailAddress] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -48,7 +48,11 @@ const SignInPage = (props) => {
               type="password"
               autoComplete="off"
             />
-            <Form.Submit disable={isInvalid} type="submit">
+            <Form.Submit
+              disable={isInvalid}
+              type="submit"
+              data-testid="sign-in"
+            >
               Sign In
             </Form.Submit>
           </Form.Base>
