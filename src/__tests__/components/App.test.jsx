@@ -48,13 +48,4 @@ describe('<App />', () => {
     );
     expect(container.firstChild).toMatchSnapshot();
   });
-
-  it('renders the <App /> Not Found Page', async () => {
-    const { container } = render(
-      <FirebaseContext.Provider value={{ firebase }}>
-        <App />
-      </FirebaseContext.Provider>
-    );
-    expect(container.firstChild).toMatchSnapshot();
-  });
 });
