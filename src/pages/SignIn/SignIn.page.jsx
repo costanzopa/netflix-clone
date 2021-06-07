@@ -34,7 +34,7 @@ const SignInPage = (props) => {
       <HeaderContainer>
         <Form>
           <Form.Title>Sign In</Form.Title>
-          {error && <Form.Error>{error}</Form.Error>}
+          {error && <Form.Error data-testid="error">{error}</Form.Error>}
           <Form.Base onSubmit={handleSignIn} method="POST">
             <Form.Input
               placeholder="Email Address"
