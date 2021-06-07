@@ -10,18 +10,18 @@ describe('<Profiles />', () => {
         <Profiles.List>
           <Profiles.User onClick={() => {}}>
             <Profiles.Picture
-              src="/images/karl.png"
+              src="/images/users/1.png"
               data-testid="profile-picture"
             />
-            <Profiles.Name>Karl</Profiles.Name>
+            <Profiles.Name>Pablo</Profiles.Name>
           </Profiles.User>
         </Profiles.List>
       </Profiles>
     );
 
-    expect(getByText("Who's watching?"));
+    expect(getByText("Who's watching?")).toBeTruthy();
     expect(getByTestId('profile-picture')).toBeTruthy();
-    expect(getByText('Karl'));
+    expect(getByText('Pablo')).toBeTruthy();
     expect(container.firstChild).toMatchSnapshot();
   });
 
@@ -32,15 +32,15 @@ describe('<Profiles />', () => {
         <Profiles.List>
           <Profiles.User onClick={() => {}}>
             <Profiles.Picture data-testid="profile-picture-misc" />
-            <Profiles.Name>Karl</Profiles.Name>
+            <Profiles.Name>Pablo</Profiles.Name>
           </Profiles.User>
         </Profiles.List>
       </Profiles>
     );
 
-    expect(getByText("Who's watching?"));
+    expect(getByText("Who's watching?")).toBeTruthy();
     expect(getByTestId('profile-picture-misc')).toBeTruthy();
-    expect(getByText('Karl'));
+    expect(getByText('Pablo')).toBeTruthy();
     expect(container.firstChild).toMatchSnapshot();
   });
 });

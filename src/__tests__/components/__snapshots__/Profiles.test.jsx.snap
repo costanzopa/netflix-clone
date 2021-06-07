@@ -18,12 +18,12 @@ exports[`<Profiles /> renders the <Profiles /> with populated data 1`] = `
       <img
         class="Profilesstyle__Picture-bszd8d-4 evjKIZ"
         data-testid="profile-picture"
-        src="/images/users//images/karl.png.png"
+        src="/images/users//images/users/1.png.png"
       />
       <p
         class="Profilesstyle__Name-bszd8d-3 bRXCei"
       >
-        Karl
+        Pablo
       </p>
     </li>
   </ul>
@@ -53,7 +53,7 @@ exports[`<Profiles /> renders the <Profiles /> with populated data but misc prof
       <p
         class="Profilesstyle__Name-bszd8d-3 bRXCei"
       >
-        Karl
+        Pablo
       </p>
     </li>
   </ul>
