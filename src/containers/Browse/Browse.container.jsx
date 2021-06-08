@@ -74,7 +74,10 @@ const BrowseContainer = ({ slides }) => {
               setSearchTerm={setSearchTerm}
             />
             <Header.Profile>
-              <Header.Picture src={user.photoURL} />
+              <Header.Picture
+                src={user.photoURL}
+                data-testid="header-profile-picture"
+              />
               <Header.Dropdown>
                 <Header.Group>
                   <Header.Picture src={user.photoURL} />
@@ -110,6 +113,7 @@ const BrowseContainer = ({ slides }) => {
                 <Card.Item key={item.docId} item={item}>
                   <Card.Image
                     src={`/images/${category}/${item.genre}/${item.slug}/small.jpg`}
+                    data-testid={item.docId}
                   />
                   <Card.Meta>
                     <Card.SubTitle>{item.title}</Card.SubTitle>

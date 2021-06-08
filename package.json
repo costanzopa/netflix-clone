@@ -42,7 +42,8 @@
     "collectCoverageFrom": [
       "<rootDir>/src/**/*.component.jsx",
       "<rootDir>/src/**/*.container.jsx",
-      "<rootDir>/src/**/*.page.jsx"
+      "<rootDir>/src/**/*.page.jsx",
+      "<rootDir>/src/utils/*.js"
     ],
     "coverageThreshold": {
       "global": {
