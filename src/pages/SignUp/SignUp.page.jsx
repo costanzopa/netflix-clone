@@ -43,7 +43,7 @@ const SignUpPage = (props) => {
       <HeaderContainer>
         <Form>
           <Form.Title>Sign Up</Form.Title>
-          {error && <Form.Error>{error}</Form.Error>}
+          {error && <Form.Error data-testid="error">{error}</Form.Error>}
           <Form.Base onSubmit={handleSignUp} method="POST">
             <Form.Input
               placeholder="First Name"
@@ -62,7 +62,11 @@ const SignUpPage = (props) => {
               type="password"
               autoComplete="off"
             />
-            <Form.Submit disable={isInvalid} type="submit">
+            <Form.Submit
+              disable={isInvalid}
+              type="submit"
+              data-testid="sign-up"
+            >
               Sign Up
             </Form.Submit>
           </Form.Base>

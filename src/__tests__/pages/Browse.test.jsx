@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import { BrowserRouter as Router } from 'react-router-dom';
-import Browse from '../../pages/Browse';
+import { BrowsePage } from '../../pages';
 import { FirebaseContext } from '../../context/firebase';
 import { useContent } from '../../hooks';
 
@@ -50,14 +50,14 @@ jest.mock('../../utils', () => ({
 
 jest.mock('../../hooks');
 
-describe('<Browse />', () => {
+describe('<BrowsePage />', () => {
   it('renders the browse page with <SelectProfileContainer />', async () => {
     const firebase = {
       auth: jest.fn(() => ({
         currentUser: {
-          displayName: 'Karl',
+          displayName: 'Pablo',
           photoURL: 1,
-          email: 'karlhadwen@gmail.com',
+          email: 'costanzopa@gmail.com',
         },
         signOut: jest.fn(() => Promise.resolve('I am signed out!')),
       })),
@@ -72,7 +72,7 @@ describe('<Browse />', () => {
     const { getByTestId, getByPlaceholderText, queryByTestId, debug } = render(
       <Router>
         <FirebaseContext.Provider value={{ firebase }}>
-          <Browse />
+          <BrowsePage />
         </FirebaseContext.Provider>
       </Router>
     );

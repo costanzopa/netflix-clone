@@ -1,13 +1,13 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import Home from '../../pages/Home';
+import { HomePage } from '../../pages';
 
 jest.mock('react-router-dom', () => ({
   Link: 'a',
 }));
 
 test('renders the homepage', () => {
-  const { getAllByText, getAllByPlaceholderText } = render(<Home />);
+  const { getAllByText, getAllByPlaceholderText } = render(<HomePage />);
   expect(getAllByText('Watch anywhere. Cancel at any time.')).toBeTruthy();
   expect(getAllByPlaceholderText('Email address')).toBeTruthy();
   expect(

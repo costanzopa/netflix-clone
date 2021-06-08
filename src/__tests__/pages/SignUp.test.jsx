@@ -2,7 +2,7 @@ import React from 'react';
 import { render, fireEvent, waitFor } from '@testing-library/react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { act } from 'react-dom/test-utils';
-import { SignInPage } from '../../pages';
+import { SignUpPage } from '../../pages';
 import { FirebaseContext } from '../../context/firebase';
 
 jest.mock('react-router-dom', () => ({
@@ -11,71 +11,82 @@ jest.mock('react-router-dom', () => ({
   Link: 'a',
 }));
 
-describe('<SignInPage />', () => {
-  it('renders the sign in page with a form submission', async () => {
+describe('<SignUpPage />', () => {
+  it('renders the sign up page with a form submission', async () => {
     const firebase = {
       auth: jest.fn(() => ({
-        signInWithEmailAndPassword: jest.fn(() =>
-          Promise.resolve('I am signed in!')
+        createUserWithEmailAndPassword: jest.fn(() =>
+          Promise.resolve({
+            user: {
+              updateProfile: jest.fn(() => Promise.resolve('I am signed up!')),
+            },
+          })
         ),
       })),
     };
     const { getByTestId, getByPlaceholderText, queryByTestId } = render(
       <Router>
         <FirebaseContext.Provider value={{ firebase }}>
-          <SignInPage />
+          <SignUpPage />
         </FirebaseContext.Provider>
       </Router>
     );
 
     await act(async () => {
+      fireEvent.change(getByPlaceholderText('First Name'), {
+        target: { value: 'Pablo' },
+      });
       fireEvent.change(getByPlaceholderText('Email Address'), {
-        target: { value: 'costanzopa@gmail.com' },
+        target: { value: 'costanzpa@gmail.com' },
       });
       fireEvent.change(getByPlaceholderText('Password'), {
         target: { value: 'password' },
       });
-      await fireEvent.click(getByTestId('sign-in'));
+      await fireEvent.click(getByTestId('sign-up'));
 
       expect(await getByPlaceholderText('Email Address').value).toBe(
-        'costanzopa@gmail.com'
+        'costanzpa@gmail.com'
       );
       expect(await getByPlaceholderText('Password').value).toBe('password');
       expect(queryByTestId('error')).toBeFalsy();
     });
   });
 
-  it('renders the sign in page with a form submission on error', async () => {
+  it('renders the sign up page with a form submission on error', async () => {
     const firebase = {
       auth: jest.fn(() => ({
-        signInWithEmailAndPassword: jest.fn(() =>
-          Promise.reject('I am signed in!')
+        createUserWithEmailAndPassword: jest.fn(() =>
+          Promise.reject({
+            user: {
+              updateProfile: jest.fn(() => Promise.resolve('I am signed up!')),
+            },
+          })
         ),
       })),
     };
+
     const { getByTestId, getByPlaceholderText } = render(
       <Router>
         <FirebaseContext.Provider value={{ firebase }}>
-          <SignInPage />
+          <SignUpPage />
         </FirebaseContext.Provider>
       </Router>
     );
 
     await act(async () => {
-      await waitFor(() =>
-        fireEvent.change(getByPlaceholderText('Email Address'), {
-          target: { value: 'costanzopa@gmail.com' },
-        })
-      );
-      await waitFor(() =>
-        fireEvent.change(getByPlaceholderText('Password'), {
-          target: { value: 'password' },
-        })
-      );
-      await waitFor(() => fireEvent.click(getByTestId('sign-in')));
+      fireEvent.change(getByPlaceholderText('First Name'), {
+        target: { value: 'Pablo' },
+      });
+      fireEvent.change(getByPlaceholderText('Email Address'), {
+        target: { value: 'costanzpa@gmail.com' },
+      });
+      fireEvent.change(getByPlaceholderText('Password'), {
+        target: { value: 'password' },
+      });
 
+      await waitFor(() => fireEvent.click(getByTestId('sign-up')));
       expect(await getByPlaceholderText('Email Address').value).toBe('');
-      expect(getByPlaceholderText('Password').value).toBe('');
+      expect(await getByPlaceholderText('Password').value).toBe('');
     });
   });
 });
