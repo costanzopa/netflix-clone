@@ -55,13 +55,12 @@ describe('<SignUpPage />', () => {
   it('renders the sign up page with a form submission on error', async () => {
     const firebase = {
       auth: jest.fn(() => ({
-        createUserWithEmailAndPassword: jest.fn(() =>
-          Promise.reject({
-            user: {
-              updateProfile: jest.fn(() => Promise.resolve('I am signed up!')),
-            },
-          })
-        ),
+        createUserWithEmailAndPassword: jest.fn(() => {
+          const error = {
+            message: 'I am signed in!',
+          };
+          return Promise.reject(error);
+        }),
       })),
     };
 
@@ -83,10 +82,10 @@ describe('<SignUpPage />', () => {
       fireEvent.change(getByPlaceholderText('Password'), {
         target: { value: 'password' },
       });
-
-      await waitFor(() => fireEvent.click(getByTestId('sign-up')));
-      expect(await getByPlaceholderText('Email Address').value).toBe('');
-      expect(await getByPlaceholderText('Password').value).toBe('');
     });
+
+    fireEvent.click(getByTestId('sign-up'));
+    await waitFor(() => getByTestId('error'));
+    expect(getByTestId('error')).toBeTruthy();
   });
 });
